@@ -11,12 +11,10 @@
         border-radius: 50%;
 
         &.rotate {
-            animation: rotation 20s infinite linear;
+            transform: rotate(36000deg);
         }
 
-        animation: rotation 20000000s infinite linear;
-
-        transition: all 2s;
+        transition: all 200s linear;
     }
 
     h2 {
