@@ -13,6 +13,10 @@
         &.rotate {
             animation: rotation 20s infinite linear;
         }
+
+        animation: rotation 20000000s infinite linear;
+
+        transition: all 2s;
     }
 
     h2 {
