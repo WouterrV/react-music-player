@@ -44,7 +44,6 @@ const Player = ( {
         } else {
             audioRef.current.play();
             setIsPlaying(true);
-
         }
 
         console.log(audioRef.current);
