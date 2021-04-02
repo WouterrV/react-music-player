@@ -2,9 +2,6 @@ import React from 'react';
 
 const Song = ( {currentSong, isPlaying} ) => {
 
-
-
-
     return(
         <div className="song-container">
             <img src={currentSong.cover} alt={currentSong.name} className={isPlaying? "rotate" : ""  } />

@@ -33,6 +33,17 @@ body {
     margin-left: 30%;
 }
 
+.dark {
+    background: lightgrey;
+}
+
+html,
+body,
+#root,
+.App {
+    height: 100%;
+}
+
 @import "./song";
 @import "./player";
 @import "./nav";
