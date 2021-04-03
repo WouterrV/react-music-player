@@ -12,9 +12,9 @@ const ThemeToggler = () => {
 
 
     return(
-        <div id="togglyWoggly" onClick={() => changeTheme({theme, setTheme}) } >
-            {theme}
-        </div>
+        <button id="togglyWoggly" onClick={() => changeTheme({theme, setTheme}) } >
+            {theme} theme
+        </button>
     )
 
 

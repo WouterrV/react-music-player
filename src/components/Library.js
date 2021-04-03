@@ -1,10 +1,19 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import LibrarySong from './LibrarySong';
 import '../styles/_library.scss';
+import ThemeContext, {changeTheme} from '../ThemeContext';
+
 
 const Library = ( {songs, setCurrentSong, setSongs, libraryStatus} ) => {
 
     //console.log('were in library, here are songs:', songs);
+
+    const {theme, setTheme} = useContext(ThemeContext);
+
+    if (theme == undefined){
+        throw new Error('theme undefined, are you using a theme in a component thats a child of the right context provider?')
+    }
+
 
     let songComponents = songs.map(
          (song) => { 
@@ -18,7 +27,7 @@ const Library = ( {songs, setCurrentSong, setSongs, libraryStatus} ) => {
     return(
         
 
-        <div className={`library ${libraryStatus? "active-library": ""}  `}>
+        <div className={`library ${libraryStatus? "active-library": ""}  ${theme}`}>
             
             <h2>Library</h2>
             
