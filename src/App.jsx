@@ -25,16 +25,20 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{theme, setTheme}}>
-      <div className={`App ${libraryStatus ? "library-active" : ""} ${theme}`}>
-        <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus}/>
+      <div className={`App ${theme}`}>
 
-        <Song currentSong={currentSong} isPlaying={isPlaying} />
+        <div id="rightColumn" className={`${libraryStatus ? "library-active" : ""} ${theme}`}>
+            <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus}/>
+
+            <Song currentSong={currentSong} isPlaying={isPlaying} />
+
+            <Player 
+              currentSong={currentSong} setCurrentSong={setCurrentSong}
+              isPlaying = {isPlaying} setIsPlaying = {setIsPlaying}
+              songs = {songs} setSongs={setSongs}
+            />
+        </div>
         
-        <Player 
-          currentSong={currentSong} setCurrentSong={setCurrentSong}
-          isPlaying = {isPlaying} setIsPlaying = {setIsPlaying}
-          songs = {songs} setSongs={setSongs}
-        />
 
         <Library songs={songs} setSongs={setSongs} setCurrentSong={setCurrentSong} 
         libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus}/>
