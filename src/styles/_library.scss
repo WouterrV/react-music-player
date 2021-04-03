@@ -1,8 +1,10 @@
+@import "variables";
+
 .library {
     position: fixed;
     top: 0;
     left: 0;
-    width: 20rem;
+    width: $library-width;
     height: 100%;
     flex-direction: column;
     display: flex;

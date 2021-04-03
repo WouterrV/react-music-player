@@ -4,18 +4,8 @@ import {faMusic} from "@fortawesome/free-solid-svg-icons";
 import ThemeToggler from './ThemeToggler';
 
 
-/*
-let navHandler = (e) => {
-    //change css class from nav?
-    // eh, change state in App, use that in rendering of library
+let libraryToggleHandler = (libraryStatus, setLibraryStatus) => {
     setLibraryStatus(!libraryStatus);
-}
-*/
-
-let libraryToggleHandler = (libraryStatus, setlibraryStatus) => {
-    console.log('toggling');
-    console.log(libraryStatus);
-    setlibraryStatus(!libraryStatus);
 }
 
 let Nav = ( {libraryStatus, setLibraryStatus}  ) => {

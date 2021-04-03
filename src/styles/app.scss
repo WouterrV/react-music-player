@@ -1,3 +1,5 @@
+@import "variables";
+
 * {
     margin: 0;
     padding: 0;
@@ -30,11 +32,12 @@ body {
 }
 
 .library-active {
-    margin-left: 30%;
+    margin-left: $library-width;
 }
 
 .dark,
-.library.dark {
+.library.dark,
+html {
     background: lightgrey;
 }
 

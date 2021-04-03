@@ -37,7 +37,7 @@ function App() {
         />
 
         <Library songs={songs} setSongs={setSongs} setCurrentSong={setCurrentSong} 
-        libraryStatus={libraryStatus} />
+        libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus}/>
 
         {/* Load fonts globally    */   }
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
